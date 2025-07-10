@@ -1,1 +1,1 @@
-export CURRENT_THEME=Solarized
+export CURRENT_THEME=Green

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-export TRANSPARENT=0x0cffffff
+export TRANSPARENT=0x207357c2
 
 export ITEM_COLOR=0xff011627
-export ACCENT_COLOR=0xffaddb67
-export SECONDARY_ITEM_COLOR=0xaad1ff9b
+export ACCENT_COLOR=0xff8367d2
+export SECONDARY_ITEM_COLOR=0xaaf7c2ff
 
 # Optional
-export BAR_COLOR=0x33011627
+export BAR_COLOR=
 
 # Optional
 export BACKGROUND_BORDER_COLOR=

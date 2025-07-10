@@ -27,7 +27,7 @@ for i in "${!themes[@]}"; do
 		sketchybar --set $NAME label=$next_theme
 		sketchybar --reload
 		source "$CONFIG_DIR/colors.sh"
-		borders "active_color=$WINDOW_BORDER_COLOR"
+		#borders "active_color=$WINDOW_BORDER_COLOR"
 		exit 0
 	fi
 done
