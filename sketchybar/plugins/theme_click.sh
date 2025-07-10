@@ -26,6 +26,8 @@ for i in "${!themes[@]}"; do
 		cp "$THEME_DIR/$next_theme.th" "$CONFIG_DIR/colors.sh"
 		sketchybar --set $NAME label=$next_theme
 		sketchybar --reload
+		source "$CONFIG_DIR/colors.sh"
+		borders "active_color=$WINDOW_BORDER_COLOR"
 		exit 0
 	fi
 done

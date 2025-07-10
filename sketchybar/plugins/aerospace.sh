@@ -28,8 +28,8 @@ if [ "$SENDER" == "mouse.exited" ]; then
   fi
   sketchybar --set "$NAME" \
     background.drawing=off \
-    label.color="$ACCENT_COLOR" \
-    icon.color="$ACCENT_COLOR" \
+    label.color="$SECONDARY_ITEM_COLOR" \
+    icon.color="$SECONDARY_ITEM_COLOR" \
     background.color="$TRANSPARENT"
   exit 0
 fi
@@ -94,8 +94,8 @@ monitor=$(aerospace list-workspaces --all --json --format "%{workspace}%{monitor
       drawing=on \
       label="$icons" \
       background.drawing=on \
-      label.color="$ACCENT_COLOR" \
-      icon.color="$ACCENT_COLOR" \
+      label.color="$SECONDARY_ITEM_COLOR" \
+      icon.color="$SECONDARY_ITEM_COLOR" \
       background.color="$TRANSPARENT"
   fi
 #fi

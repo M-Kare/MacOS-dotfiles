@@ -1,1 +1,1 @@
-export CURRENT_THEME=White_Mono
+export CURRENT_THEME=Solarized

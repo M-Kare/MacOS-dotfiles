@@ -9,8 +9,8 @@ for sid in $(aerospace list-workspaces --all); do
     --set space."$sid" \
     icon=$sid \
     background.color=$TRANSPARENT \
-    label.color=$ACCENT_COLOR \
-    icon.color=$ACCENT_COLOR \
+    label.color=$SECONDARY_ITEM_COLOR \
+    icon.color=$SECONDARY_ITEM_COLOR \
     display=$monitor \
     label.font="sketchybar-app-font:Regular:12.0" \
     icon.font="SF Pro:Semibold:12.0" \

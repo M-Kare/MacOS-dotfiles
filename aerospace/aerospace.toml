@@ -103,6 +103,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
 	if.app-name-regex-substring = 'outlook'
+	if.window-title-regex-substring = 'inbox'
 	run = 'move-node-to-workspace 9'
 
 # 'main' binding mode declaration

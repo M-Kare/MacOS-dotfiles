@@ -1,8 +1,16 @@
 #!/bin/bash
 
-export TRANSPARENT=0x00ffffff
+export TRANSPARENT=0x17
 
 export ITEM_COLOR=0xff
 export ACCENT_COLOR=0xff
+export SECONDARY_ITEM_COLOR=$ACCENT_COLOR
 
-export BAR_COLOR=0x17
+# Optional
+export BAR_COLOR=
+
+# Optional
+export BACKGROUND_BORDER_COLOR=
+
+export WINDOW_BORDER_COLOR=0xffe2e2e3
+

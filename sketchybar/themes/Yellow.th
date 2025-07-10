@@ -3,7 +3,7 @@
 export TRANSPARENT=0x0cffffff
 
 export ITEM_COLOR=0xff000000
-export ACCENT_COLOR=0xffc3c6cb
+export ACCENT_COLOR=0xfff7fc17
 export SECONDARY_ITEM_COLOR=$ACCENT_COLOR
 
 export BAR_COLOR=
