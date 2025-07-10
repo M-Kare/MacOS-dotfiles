@@ -1,0 +1,104 @@
+#!/bin/bash
+
+# Loads all defined colors
+source "$CONFIG_DIR/colors.sh"
+
+# This is a demo config to show some of the most important commands more easily.
+# This is meant to be changed and configured, as it is intentionally kept sparse.
+# For a more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+NERD_FONT="Hack Nerd Font"
+FONT="SF Pro"
+NOTCH_SPACING=100
+
+##### Bar Appearance #####
+# Configuring the general appearance of the bar, these are only some of the
+# options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+
+sketchybar --bar height=30 \
+  blur_radius=30 \
+  position=top \
+  sticky=on \
+  padding_left=10 \
+  padding_right=10 \
+  notch_width=0
+
+if [ ! -z $BAR_COLOR ];then
+		sketchybar --bar color=$BAR_COLOR
+fi
+  
+##### Changing Defaults #####
+# We now change some default values that are applied to all further items
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
+sketchybar --default icon.font="$NERD_FONT:Regular:12.0"\
+  icon.color=$ITEM_COLOR \
+  label.font="$FONT:Semibold:12.0" \
+  label.color=$ITEM_COLOR \
+  background.color=$ACCENT_COLOR \
+  background.corner_radius=10 \
+  background.height=18 \
+  padding_left=4 \
+  padding_right=4 \
+  icon.padding_left=6 \
+  icon.padding_right=3 \
+  label.padding_left=3 \
+  label.padding_right=6
+
+if [ ! -z $BACKGROUND_BORDER_COLOR ];then
+		sketchybar --default background.border_color="$BACKGROUND_BORDER_COLOR"\
+				background.border_width=2
+fi
+
+
+# -- Left Side Items (left) --
+source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/front_app.sh
+
+
+############################################################
+############################################################
+# Spacing for the inner middle left (because Notch spacing only applies to internal display
+sketchybar --add item spacerML q \
+		--set spacerML background.color=0x00ffffff \
+		background.padding_left=$NOTCH_SPACING \
+		background.padding_right=0 \
+		background.border_width=0
+############################################################
+############################################################
+# -- Left Side Of Notch Items (q) --
+source $ITEM_DIR/theme.sh
+
+############################################################
+############################################################
+# Spacing for the inner middle right (because Notch spacing only applies to internal display
+sketchybar --add item spacerMR e \
+		--set spacerMR background.color=0x00ffffff \
+		background.padding_left=0 \
+		background.padding_right=$NOTCH_SPACING \
+		background.border_width=0
+############################################################
+############################################################
+# -- Right Side Of Notch Items (e) --
+source $ITEM_DIR/cpu.sh
+source $ITEM_DIR/memory.sh
+
+# -- Right Side Items (right) --
+source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/wifi.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/vpn.sh
+
+##### Finalizing Setup #####
+# The below command is only needed at the end of the initial configuration to
+# force all scripts to run the first time, it should never be run in an item script.
+
+sketchybar --update

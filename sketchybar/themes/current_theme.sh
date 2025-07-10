@@ -1,0 +1,1 @@
+export CURRENT_THEME=White_Mono

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export COLORPIN_COLORS=(0xffff0000 0xff00ff00 0xff0000ff 0xffffff00 0xff00ffff 0xffff00ff)
