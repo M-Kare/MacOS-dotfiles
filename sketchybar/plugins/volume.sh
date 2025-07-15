@@ -3,22 +3,36 @@
 # The volume_change event supplies a $INFO variable in which the current volume
 # percentage is passed to the script.
 
-if [ "$SENDER" = "volume_change" ]; then
+case "$SENDER" in
+  "volume_change")
+			
+    VOLUME=$INFO
 
-  VOLUME=$INFO
+    case $VOLUME in
+    [6-9][0-9] | 100)
+      ICON="􀊩"
+      ;;
+    [3-5][0-9])
+      ICON="􀊥"
+      ;;
+    [1-9] | [1-2][0-9])
+      ICON="􀊡"
+      ;;
+    *) ICON="􀊣" ;;
+    esac
 
-  case $VOLUME in
-  [6-9][0-9] | 100)
-    ICON="􀊩"
+    sketchybar --set $NAME icon="$ICON" label="$VOLUME%" slider.percentage=$VOLUME
+	;;
+  "mouse.clicked")
+	osascript -e "set volume output volume $PERCENTAGE"
     ;;
-  [3-5][0-9])
-    ICON="􀊥"
+  "mouse.entered")
+	sketchybar --set $NAME slider.knob.drawing=on \
+				--animate tanh 30 --set $NAME slider.width=100
     ;;
-  [1-9] | [1-2][0-9])
-    ICON="􀊡"
+  "mouse.exited")
+	sketchybar --set $NAME slider.knob.drawing=off \
+				--animate tanh 30 --set $NAME slider.width=0
     ;;
-  *) ICON="􀊣" ;;
-  esac
+esac
 
-  sketchybar --set $NAME icon="$ICON" label="$VOLUME%"
-fi

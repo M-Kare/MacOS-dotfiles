@@ -1,14 +1,16 @@
 #!/bin/bash
 
-export TRANSPARENT=0x20ffffff
+export TRANSPARENT=0x207357c2
 
-# -- Gray Scheme --
-export ITEM_COLOR=0xff000000
-export ACCENT_COLOR=0xffffffff
-export SECONDARY_ITEM_COLOR=0xffcccccc
+export ITEM_COLOR=0xff011627
+export ACCENT_COLOR=0xff8367d2
+export SECONDARY_ITEM_COLOR=0xaaf7c2ff
 
-export BAR_COLOR=0x11ffffff
+# Optional
+export BAR_COLOR=
 
+# Optional
 export BACKGROUND_BORDER_COLOR=
 
 export WINDOW_BORDER_COLOR=$ACCENT_COLOR
+

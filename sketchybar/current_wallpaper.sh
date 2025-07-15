@@ -1,1 +1,1 @@
-export CURRENT_WALLPAPER=Pixel_City.png
+export CURRENT_WALLPAPER=Lonely_Stop.png

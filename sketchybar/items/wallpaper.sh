@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# TODO: add DropDown Menu for wallpaper selection
 source "$CONFIG_DIR/current_wallpaper.sh"
 
 wallpaper_name="${CURRENT_WALLPAPER%.*}"
