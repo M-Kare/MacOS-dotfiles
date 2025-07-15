@@ -1,1 +1,1 @@
-export CURRENT_THEME=Purple
+export CURRENT_THEME=Grey

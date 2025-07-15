@@ -7,7 +7,7 @@ export ACCENT_COLOR=0xff8367d2
 export SECONDARY_ITEM_COLOR=0xaaf7c2ff
 
 # Optional
-export BAR_COLOR=
+export BAR_COLOR=0x33000000
 
 # Optional
 export BACKGROUND_BORDER_COLOR=
