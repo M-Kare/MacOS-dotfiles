@@ -11,5 +11,4 @@ sketchybar --add item wallpaper q \
 			--set wallpaper icon="󰟾" \
 			label.padding_right=0 \
 			label.padding_left=0 \
-			#label="$wallpaper_name" \
 			click_script="$PLUGIN_DIR/wallpaper_click.sh"

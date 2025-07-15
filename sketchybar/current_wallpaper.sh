@@ -1,1 +1,1 @@
-export CURRENT_WALLPAPER=View_of_Dresden_by_Moonlight.jpg
+export CURRENT_WALLPAPER=Pixel_City.png
