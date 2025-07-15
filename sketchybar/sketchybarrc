@@ -74,6 +74,7 @@ sketchybar --add item spacerML q \
 ############################################################
 ############################################################
 # -- Left Side Of Notch Items (q) --
+source $ITEM_DIR/wallpaper.sh
 source $ITEM_DIR/theme.sh
 source $ITEM_DIR/pdfRenamer.sh
 
