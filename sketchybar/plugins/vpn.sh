@@ -1,4 +1,4 @@
-VPN=$(ifconfig | grep utun4)
+VPN=$(ifconfig | grep utun5)
 
 if [[ $VPN != "" ]]; then
 		sketchybar -m --set vpn label=" "
